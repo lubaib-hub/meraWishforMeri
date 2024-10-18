@@ -1,17 +1,23 @@
 {
   "name": "lofty-leather",
   "private": true,
+  "homepage": "http://lubaib-hub.github.io/meraWishforMeri/",
   "version": "0.0.1",
   "type": "module",
   "author": "Somnath Das",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "preload":"npm run build",
-    "deploy":"gh-pages -d build"
+     "preinstall": "npx npm-force-resolutions"
   },
+  "resolutions": {
+  "phin": "3.7.1"
+},
+
   "dependencies": {
     "@roylee1997/react-palette": "^1.0.0",
     "framer-motion": "^10.12.16",
